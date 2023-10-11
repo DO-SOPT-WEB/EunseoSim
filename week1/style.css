@@ -1,13 +1,16 @@
 @import url("reset.css");
 
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css");
+
 :root {
   --light-gray-color: #f3f3f3;
   --gray-color: #e2e2e2;
-  --light-red: #ffc5c5;
-  --light-yellow: #ffe792;
-  --light-green: #d3f6a6;
-  --light-blue: #bbe7ff;
-  --light-purple: #d7bbfb;
+  --green1-color: #648057;
+  --green2-color: #7d9f6c;
+  --green3-color: #acd199;
+  --green4-color: #cce0c2;
+  --green5-color: #ebf3e6;
+  --white-color: #ffffff;
 }
 
 html,
@@ -18,6 +21,8 @@ body {
 
 body {
   padding: 2rem;
+
+  font-family: "Pretendard-Regular";
 }
 
 img {
@@ -29,7 +34,7 @@ img {
   border-radius: 3rem;
 
   padding: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 header {
@@ -39,6 +44,10 @@ header {
   width: fit-content;
 
   background-color: var(--gray-color);
+  color: var(--green1-color);
+
+  font-size: 1.5rem;
+  font-weight: 800;
 }
 
 .onboarding-scroll {
@@ -58,32 +67,36 @@ header {
 
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 4rem;
 
   margin-bottom: 5rem;
 }
 
 .nav-category {
-  padding: 0.5rem 1rem;
+  padding: 0.8rem 1.4rem;
   border-radius: 2rem;
+
+  font-size: 1.2rem;
+
+  color: var(--white-color);
 }
 
-.red-border {
-  border: 0.2rem solid var(--light-red);
+.green1-border {
+  background-color: var(--green1-color);
 }
 
-.yellow-border {
-  border: 0.2rem solid var(--light-yellow);
+.green2-border {
+  background-color: var(--green2-color);
 }
 
-.green-border {
-  border: 0.2rem solid var(--light-green);
+.green3-border {
+  background-color: var(--green3-color);
 }
 
-.blue-border {
-  border: 0.2rem solid var(--light-blue);
+.green4-border {
+  background-color: var(--green4-color);
 }
 
-.purple-border {
-  border: 0.2rem solid var(--light-purple);
+.green5-border {
+  background-color: var(--green5-color);
 }
