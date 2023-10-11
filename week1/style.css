@@ -3,6 +3,11 @@
 :root {
   --light-gray-color: #f3f3f3;
   --gray-color: #e2e2e2;
+  --light-red: #ffc5c5;
+  --light-yellow: #ffe792;
+  --light-green: #d3f6a6;
+  --light-blue: #bbe7ff;
+  --light-purple: #d7bbfb;
 }
 
 html,
@@ -24,6 +29,7 @@ img {
   border-radius: 3rem;
 
   padding: 2rem;
+  margin-bottom: 2rem;
 }
 
 header {
@@ -42,5 +48,42 @@ header {
   justify-content: space-between;
   gap: 1rem;
 
+  margin-bottom: 3rem;
+
   overflow: scroll;
+}
+
+.onboarding-nav {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  margin-bottom: 5rem;
+}
+
+.nav-category {
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+}
+
+.red-border {
+  border: 0.2rem solid var(--light-red);
+}
+
+.yellow-border {
+  border: 0.2rem solid var(--light-yellow);
+}
+
+.green-border {
+  border: 0.2rem solid var(--light-green);
+}
+
+.blue-border {
+  border: 0.2rem solid var(--light-blue);
+}
+
+.purple-border {
+  border: 0.2rem solid var(--light-purple);
 }
