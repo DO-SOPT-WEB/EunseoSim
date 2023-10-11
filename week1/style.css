@@ -1,7 +1,12 @@
 @import url("reset.css");
 
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css");
-
+@font-face {
+  font-family: "EF_jejudoldam";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_jejudoldam.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 :root {
   --light-gray-color: #f3f3f3;
   --gray-color: #e2e2e2;
@@ -21,8 +26,7 @@ body {
 
 body {
   padding: 2rem;
-
-  font-family: "Pretendard-Regular";
+  font-family: "EF_jejudoldam";
 }
 
 img {
@@ -38,12 +42,12 @@ img {
 }
 
 header {
-  padding: 1rem 2rem;
+  padding: 0.7rem 0.5rem;
   margin-bottom: 2rem;
-  border-radius: 1.8rem;
   width: fit-content;
 
-  background-color: var(--gray-color);
+  border-bottom: 0.2rem solid var(--green1-color);
+  border-style: none none dashed none;
   color: var(--green1-color);
 
   font-size: 1.5rem;
