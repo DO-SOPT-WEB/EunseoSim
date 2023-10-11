@@ -1,1 +1,36 @@
 @import url("reset.css");
+
+:root {
+  --light-gray-color: #f3f3f3;
+  --gray-color: #e2e2e2;
+}
+
+html,
+body {
+  font-size: 62.5%;
+  line-height: 1.285;
+}
+
+body {
+  padding: 2rem;
+}
+
+img {
+  width: 10rem;
+}
+
+.onboarding {
+  background-color: var(--light-gray-color);
+  border-radius: 3rem;
+
+  padding: 2rem;
+}
+
+header {
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  border-radius: 1.8rem;
+  width: fit-content;
+
+  background-color: var(--gray-color);
+}
