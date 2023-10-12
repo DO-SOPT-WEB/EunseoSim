@@ -11,10 +11,10 @@
   --light-gray-color: #f3f3f3;
   --gray-color: #e2e2e2;
   --green1-color: #648057;
-  --green2-color: #7d9f6c;
-  --green3-color: #acd199;
-  --green4-color: #cce0c2;
-  --green5-color: #ebf3e6;
+  --green2-color: #6f8d60;
+  --green3-color: #91aa84;
+  --green4-color: #c0d3b7;
+  --green5-color: #cce0c2;
   --white-color: #ffffff;
 }
 
@@ -34,10 +34,6 @@ img {
 }
 
 .onboarding {
-  background-color: var(--light-gray-color);
-  border-radius: 3rem;
-
-  padding: 2rem;
   margin-bottom: 4rem;
 }
 
@@ -85,22 +81,22 @@ header {
   color: var(--white-color);
 }
 
-.green1-border {
-  background-color: var(--green1-color);
+.green1-color {
+  color: var(--green1-color);
 }
 
-.green2-border {
-  background-color: var(--green2-color);
+.green2-color {
+  color: var(--green2-color);
 }
 
-.green3-border {
-  background-color: var(--green3-color);
+.green3-color {
+  color: var(--green3-color);
 }
 
-.green4-border {
-  background-color: var(--green4-color);
+.green4-color {
+  color: var(--green4-color);
 }
 
-.green5-border {
-  background-color: var(--green5-color);
+.green5-color {
+  color: var(--green5-color);
 }
