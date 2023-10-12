@@ -196,7 +196,8 @@ section > h1 {
 
 /* third section */
 .third-section-gallery {
-  height: 50rem;
+  height: 60rem;
+
   display: grid;
   gap: 1rem;
   grid-template-rows: 25% 25% 25% 25%;
@@ -206,6 +207,9 @@ section > h1 {
     "item3 item3 item2 item2"
     "item4 item4 item4 item5"
     "item4 item4 item4 item5";
+
+  padding-right: 3rem;
+  padding-bottom: 3rem;
 }
 
 .third-section-gallery > img {
