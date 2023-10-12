@@ -42,7 +42,7 @@ header {
   margin-bottom: 2rem;
   width: fit-content;
 
-  border-bottom: 0.2rem solid var(--green-color);
+  border-bottom: 0.4rem solid var(--green-color);
   border-style: none none dotted none;
   color: var(--green-color);
 
@@ -231,4 +231,21 @@ section > h1 {
 }
 .grid-item:nth-child(5) {
   grid-area: item5;
+}
+
+/* footer */
+
+footer {
+  height: 10rem;
+  padding: 5rem 0;
+  margin-top: 3rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-top: 0.4rem dotted var(--green-color);
+  border-bottom: 0.4rem dotted var(--green-color);
+
+  color: var(--green-color);
 }
