@@ -249,3 +249,14 @@ footer {
 
   color: var(--green-color);
 }
+
+/* animation */
+.first-section-gallery img,
+.second-section-gallery img {
+  transition: transform 500ms;
+}
+
+.first-section-gallery img:hover,
+.second-section-gallery img:hover {
+  transform: translateY(-0.5rem);
+}
