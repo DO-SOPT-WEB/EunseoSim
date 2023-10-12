@@ -21,14 +21,21 @@
       </div>
     </section>
     <main>
-      <div>
+      <div class="date">
         <button type="button"><</button>
         <span>10월 13일</span>
         <button type="button">></button>
       </div>
-      <div>
-        <h2>내역</h2>
-        <div><input type="checkbox" />수입 <input type="checkbox" />지출</div>
+      <div class="overall-list">
+        <div class="sub-menu">
+          <strong>내역</strong>
+          <div class="checkboxes">
+            <input type="checkbox" name="income" id="checkbox-income" />
+            <label for="checkbox-income">수입</label>
+            <input type="checkbox" name="spending" id="checkbox-spending" />
+            <label for="checkbox-spending">지출</label>
+          </div>
+        </div>
         <ol>
           <li>
             <div>
