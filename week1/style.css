@@ -33,10 +33,6 @@ body {
   font-family: "EF_jejudoldam";
 }
 
-img {
-  width: 20rem;
-}
-
 .onboarding {
   margin-bottom: 4rem;
 }
@@ -123,6 +119,7 @@ section > h1 {
     );
   background-size: var(--bgSize) var(--bgSize);
   background-position: 0 0, var(--bgPosition) var(--bgPosition);
+  padding: 2rem 0;
 }
 
 .first-section {
@@ -132,4 +129,25 @@ section > h1 {
   gap: 2rem;
 
   padding: 3rem 0;
+}
+
+.second-section-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.second-section-gallery > .first-img {
+  width: 41rem;
+  height: 41rem;
+}
+
+.second-section-gallery > .right-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 0 0 calc(50% - 10px);
+  gap: 1rem;
 }
