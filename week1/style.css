@@ -50,6 +50,10 @@ header {
   font-weight: 800;
 }
 
+img {
+  height: 20rem;
+}
+
 .onboarding-scroll {
   width: 100%;
 
@@ -159,4 +163,28 @@ section > h1 {
   flex-wrap: wrap;
   flex: 0 0 calc(50% - 10px);
   gap: 1rem;
+}
+
+@media (max-width: 879px) {
+  .second-section-gallery > .first-img,
+  .second-section-gallery > .right-side > .last-img {
+    width: 62rem;
+    height: 20rem;
+  }
+
+  .second-section-gallery {
+    flex-wrap: wrap;
+  }
+  .second-section-gallery > .right-side {
+    flex: auto;
+  }
+}
+
+@media (max-width: 659px) {
+  .second-section-gallery > .right-side > .last-img {
+    width: 20rem;
+  }
+  .second-section-gallery > .first-img {
+    width: 41rem;
+  }
 }
