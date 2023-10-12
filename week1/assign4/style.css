@@ -202,6 +202,14 @@ li > .title {
   gap: 2rem;
 }
 
+li > .title > h3 {
+  width: 20rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+
 .delete-btn {
   background-color: var(--dark-yellow-color);
 
