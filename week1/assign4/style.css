@@ -138,9 +138,10 @@ main {
 
 .overall-list {
   width: 100%;
-  height: 40rem;
+  height: 50rem;
 
   padding: 2rem;
+  margin-top: 2rem;
 
   overflow-y: scroll;
 }
@@ -176,6 +177,7 @@ input[type="checkbox"]:checked + label {
 /* list */
 ol {
   margin-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 li {
@@ -220,4 +222,40 @@ li > h4 {
 
 .text-spending {
   color: var(--blue-color);
+}
+
+/* bottom plus button */
+.bottom-plus-btn {
+  width: 100%;
+  height: 4rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--gray-color);
+
+  position: fixed;
+  bottom: 0;
+}
+
+.bottom-plus-btn > button {
+  background-color: var(--yellow-color);
+  color: var(--dark-gray-color);
+
+  width: 5rem;
+  height: 5rem;
+
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 4rem;
+
+  position: absolute;
+  bottom: 1rem;
+
+  cursor: pointer;
 }
