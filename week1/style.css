@@ -122,7 +122,9 @@ section > h1 {
   padding: 2rem 0;
 }
 
-.first-section {
+/* first section */
+
+.first-section-gallery {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -130,6 +132,13 @@ section > h1 {
 
   padding: 3rem 0;
 }
+
+.first-section-gallery > img {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+/* second section */
 
 .second-section-gallery {
   display: flex;
