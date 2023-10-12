@@ -10,11 +10,11 @@
 :root {
   --light-gray-color: #f3f3f3;
   --gray-color: #7d7d7d;
-  --green1-color: #648057;
-  --green2-color: #6f8d60;
+  --green-color: #648057;
+  /* --green2-color: #6f8d60;
   --green3-color: #91aa84;
   --green4-color: #c0d3b7;
-  --green5-color: #cce0c2;
+  --green5-color: #cce0c2; */
   --white-color: #ffffff;
 }
 
@@ -42,9 +42,9 @@ header {
   margin-bottom: 2rem;
   width: fit-content;
 
-  border-bottom: 0.2rem solid var(--green1-color);
-  border-style: none none dashed none;
-  color: var(--green1-color);
+  border-bottom: 0.2rem solid var(--green-color);
+  border-style: none none dotted none;
+  color: var(--green-color);
 
   font-size: 1.5rem;
   font-weight: 800;
@@ -78,34 +78,51 @@ header {
 
   font-size: 1.2rem;
 
-  color: var(--white-color);
+  color: var(--green-color);
 }
 
 .nav-category:hover {
   color: var(--gray-color);
 
-  border-bottom: 0.2rem solid var(--green1-color);
-  border-style: none none dashed none;
+  border-bottom: 0.2rem solid var(--gray-color);
+  border-style: none none dotted none;
 
   cursor: pointer;
 }
 
-.green1-color {
-  color: var(--green1-color);
+section > h1 {
+  font-size: 2rem;
+
+  color: var(--green-color);
+  background-color: var(--white-color);
+
+  border: 0.3rem solid var(--green-color);
+  padding: 3rem;
 }
 
-.green2-color {
-  color: var(--green2-color);
+.halftone {
+  --dotSize: 0.2rem;
+  --bgSize: 5rem;
+  --bgPosition: calc(var(--bgSize) / 2);
+  background-image: radial-gradient(
+      circle at center,
+      var(--green-color) var(--dotSize),
+      transparent 0
+    ),
+    radial-gradient(
+      circle at center,
+      var(--green-color) var(--dotSize),
+      transparent 0
+    );
+  background-size: var(--bgSize) var(--bgSize);
+  background-position: 0 0, var(--bgPosition) var(--bgPosition);
 }
 
-.green3-color {
-  color: var(--green3-color);
-}
+.first-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
 
-.green4-color {
-  color: var(--green4-color);
-}
-
-.green5-color {
-  color: var(--green5-color);
+  padding: 3rem 0;
 }
