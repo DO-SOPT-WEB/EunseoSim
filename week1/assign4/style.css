@@ -1,3 +1,53 @@
 @import url("reset.css");
 
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css");
+
+:root {
+  --red-color: #d06661;
+  --white-color: #ffffff;
+  --weak-white-color: #ffffff5a;
+  --dark-gray-color: #464646;
+  --gray-color: #898989;
+}
+
+html,
+body {
+  font-size: 62.5%;
+  line-height: 1.285;
+}
+
+body {
+  font-family: "Pretendard";
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 1rem;
+}
+
+/* summary section */
+.summary {
+  background-color: var(--red-color);
+  color: var(--white-color);
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+header {
+  font-size: 2.4rem;
+  font-weight: 800;
+
+  margin: 2rem 0;
+  padding-bottom: 2rem;
+  width: 100%;
+
+  text-align: center;
+
+  border-bottom: 0.1rem solid var(--weak-white-color);
+}
