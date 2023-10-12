@@ -9,6 +9,7 @@
   --blue-color: #618dd0;
   --white-color: #ffffff;
   --weak-white-color: #ffffff5a;
+  --weak-gray-color: rgb(231, 231, 231);
   --dark-gray-color: #464646;
   --gray-color: #898989;
 }
@@ -125,6 +126,8 @@ main {
   justify-content: space-between;
 
   margin-bottom: 1rem;
+
+  padding: 0 1rem;
 }
 
 .sub-menu > strong {
@@ -145,4 +148,56 @@ main {
 input[type="checkbox"]:checked + label {
   background-color: var(--dark-yellow-color);
   color: var(--dark-gray-color);
+}
+
+/* list */
+ol {
+  margin-top: 5rem;
+
+  height: 40rem;
+  overflow-y: scroll;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  padding: 2.5rem 1rem;
+  margin-bottom: 1.2rem;
+
+  border-bottom: 0.1rem solid var(--weak-gray-color);
+}
+
+li > button {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+li > .title {
+  display: flex;
+  gap: 2rem;
+}
+
+.delete-btn {
+  background-color: var(--dark-yellow-color);
+
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 0.5rem;
+}
+
+li > h4 {
+  font-weight: 700;
+}
+
+.text-spending {
+  color: var(--blue-color);
 }
