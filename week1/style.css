@@ -108,6 +108,7 @@ section > h1 {
 
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 
 .halftone {
@@ -285,6 +286,7 @@ footer {
   position: fixed;
   right: 3rem;
   bottom: 3rem;
+  z-index: 2;
 
   cursor: pointer;
 }
