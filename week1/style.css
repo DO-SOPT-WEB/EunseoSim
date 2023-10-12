@@ -193,3 +193,38 @@ section > h1 {
     width: 41rem;
   }
 }
+
+/* third section */
+.third-section-gallery {
+  height: 50rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: 25% 25% 25% 25%;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-areas:
+    "item1 item1 item2 item2"
+    "item3 item3 item2 item2"
+    "item4 item4 item4 item5"
+    "item4 item4 item4 item5";
+}
+
+.third-section-gallery > img {
+  width: 100%;
+  height: 100%;
+}
+
+.grid-item:nth-child(1) {
+  grid-area: item1;
+}
+.grid-item:nth-child(2) {
+  grid-area: item2;
+}
+.grid-item:nth-child(3) {
+  grid-area: item3;
+}
+.grid-item:nth-child(4) {
+  grid-area: item4;
+}
+.grid-item:nth-child(5) {
+  grid-area: item5;
+}
