@@ -11,10 +11,6 @@
   --light-gray-color: #f3f3f3;
   --gray-color: #7d7d7d;
   --green-color: #648057;
-  /* --green2-color: #6f8d60;
-  --green3-color: #91aa84;
-  --green4-color: #c0d3b7;
-  --green5-color: #cce0c2; */
   --white-color: #ffffff;
 }
 
@@ -54,6 +50,9 @@ header {
 
 img {
   height: 20rem;
+
+  border: 0.3rem solid var(--green-color);
+
   object-fit: cover;
 }
 
