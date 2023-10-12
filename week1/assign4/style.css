@@ -36,11 +36,12 @@ body {
   background-color: var(--yellow-color);
 
   width: 100%;
-  padding-bottom: 4rem;
+  padding-bottom: 5rem;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   font-size: 1.6rem;
 }
 
@@ -48,8 +49,9 @@ header {
   font-size: 2.4rem;
   font-weight: 700;
 
-  margin: 2rem 0;
+  margin: 2.5rem 0;
   padding-bottom: 2rem;
+  margin-bottom: 4rem;
   width: 100%;
 
   text-align: center;
@@ -113,20 +115,41 @@ main {
   font-size: 2rem;
 
   margin-top: 2rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.date > button {
+  background-color: var(--weak-gray-color);
+  color: var(--gray-color);
+
+  font-size: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
 }
 
 .overall-list {
   width: 100%;
+  height: 40rem;
 
   padding: 2rem;
+
+  overflow-y: scroll;
 }
 
 .sub-menu {
   display: flex;
   justify-content: space-between;
 
-  margin-bottom: 1rem;
-
+  margin: 1rem 0;
   padding: 0 1rem;
 }
 
@@ -153,9 +176,6 @@ input[type="checkbox"]:checked + label {
 /* list */
 ol {
   margin-top: 5rem;
-
-  height: 40rem;
-  overflow-y: scroll;
 }
 
 li {
