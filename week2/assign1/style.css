@@ -204,6 +204,14 @@ section > h1 {
   -webkit-box-orient: vertical;
 }
 
+.content-more-btn {
+  background-color: var(--white-color);
+  color: var(--green-color);
+
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+
 /* second section */
 
 .second-section-gallery {
