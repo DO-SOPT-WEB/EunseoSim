@@ -158,9 +158,39 @@ section > h1 {
   padding: 3rem 0;
 }
 
-.first-section-gallery > img {
+.first-section-gallery img {
+  width: 100%;
+}
+
+/* image overlay */
+.overlay-wrapper {
+  position: relative;
   flex-grow: 1;
   flex-shrink: 1;
+}
+
+.overlay-wrapper > .content {
+  position: absolute;
+  display: none;
+
+  width: 100%;
+  height: 98%;
+
+  background-color: #0000005e;
+  color: var(--white-color);
+}
+
+.overlay-wrapper:hover .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.overlay-wrapper:hover .content > h3 {
+  font-size: 1.4rem;
 }
 
 /* second section */
@@ -274,12 +304,12 @@ footer {
 }
 
 /* animation */
-.first-section-gallery img,
+.overlay-wrapper:hover,
 .second-section-gallery img {
   transition: transform 500ms;
 }
 
-.first-section-gallery img:hover,
+.overlay-wrapper:hover,
 .second-section-gallery img:hover {
   transform: translateY(-0.5rem);
 }
