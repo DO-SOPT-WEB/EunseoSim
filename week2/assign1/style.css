@@ -176,8 +176,14 @@ section > h1 {
   width: 100%;
   height: 98%;
 
+  padding: 2rem;
+
   background-color: #0000005e;
   color: var(--white-color);
+}
+
+.overlay-wrapper .content > h3 {
+  font-size: 1.4rem;
 }
 
 .overlay-wrapper:hover .content {
@@ -189,8 +195,13 @@ section > h1 {
   justify-content: center;
 }
 
-.overlay-wrapper:hover .content > h3 {
-  font-size: 1.4rem;
+/* ellipsis */
+.overlay-wrapper > .content > p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 /* second section */
