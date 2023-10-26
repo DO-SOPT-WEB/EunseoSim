@@ -315,7 +315,9 @@ footer {
 }
 
 /* top button */
-.top-btn {
+#top-btn {
+  opacity: 0;
+
   background-color: var(--green-color);
   color: var(--white-color);
 
