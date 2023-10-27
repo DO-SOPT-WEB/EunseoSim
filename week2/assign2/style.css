@@ -327,15 +327,16 @@ li > h4 {
   position: fixed;
 
   display: none;
+
   justify-content: center;
   align-items: center;
 }
 
-.add-btn-modal__content > h3 {
+#add-btn-modal__content > h3 {
   font-size: 2rem;
 }
 
-.add-btn-modal__content {
+#add-btn-modal__content {
   background-color: var(--white-color);
 
   padding: 4rem;
@@ -352,6 +353,9 @@ li > h4 {
 
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
+
+  transform: translateY(100%);
+  transition: transform 0.5s ease;
 }
 
 .add-form-radios {

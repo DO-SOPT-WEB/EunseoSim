@@ -166,12 +166,21 @@ function handleItemAddModal(list) {
   const costInput = document.getElementById("add-form-cost-input");
   const nameInput = document.getElementById("add-form-name-input");
 
+  const slidingModalContent = document.getElementById("add-btn-modal__content");
+
   addBtn.addEventListener("click", () => {
     addModal.style.display = "flex";
+    setTimeout(() => {
+      slidingModalContent.style.transform = "translateY(0%)";
+    }, 0);
   });
 
   addModalCancelBtn.addEventListener("click", () => {
-    addModal.style.display = "none";
+    slidingModalContent.style.transform = "translateY(100%)";
+    setTimeout(() => {
+      addModal.style.display = "none";
+    }, 500);
+
     addFormRadioIncome.checked = true;
     addFormRadioSpending.checked = false;
     costInput.value = "";
@@ -242,7 +251,7 @@ function handleItemAdd(
         ? Number(costInput.value.replaceAll(",", ""))
         : -1 * Number(costInput.value.replaceAll(",", "")),
     };
-    console.log("등록하다");
+    alert("새로운 내역이 추가되었습니다.");
     list.push(newItem);
     localStorage.setItem("list_data", JSON.stringify(list));
 
