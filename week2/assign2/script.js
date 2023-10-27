@@ -184,6 +184,7 @@ function handleItemAddModal(list) {
     addFormRadioSpending.checked = false;
     costInput.value = "";
     nameInput.value = "";
+    handleSelectOption();
   });
 
   handleSelectOption(); //최초 설정
