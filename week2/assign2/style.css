@@ -450,3 +450,12 @@ input[type="text"]::placeholder {
   width: 100%;
   text-align: center;
 }
+
+/* bottom category button */
+.bottom-category-btn {
+  position: fixed;
+  bottom: 0.5rem;
+  right: 1rem;
+
+  font-size: 2rem;
+}
