@@ -21,6 +21,10 @@ window.onload = () => {
 
 /* 계산된 나의 자산과 총 수입, 지출을 렌더링하는 함수 */
 function countBalance(list) {
+  balance = INIT_BALANCE;
+  income = INIT_BALANCE;
+  spending = INIT_BALANCE;
+
   list.forEach((item) => {
     balance += item.cost;
     item.cost < 0 ? (spending += item.cost) : (income += item.cost);
@@ -96,6 +100,8 @@ function handleItemDelete(list) {
       list = list.filter((item) => item.customId != targetId); //리스트에서 삭제한 아이템을 지움
 
       localStorage.setItem("list_data", JSON.stringify(list)); //localStorage에 반영
+
+      countBalance(list); //나의 자산, 총 수입/지출에 반영
     });
   });
 }
