@@ -146,17 +146,18 @@ function handleItemDelete(list) {
 
 /* 리스트 아이템 등록을 동작시키는 함수 */
 function handleItemAdd(list) {
-  const addFormRadioIncome = document.getElementById("add-form-radio-income");
+  const addFormRadioIncome = document.getElementById("add-form-radio-income"); //수입 radio 버튼
   const addFormRadioSpending = document.getElementById(
-    "add-form-radio-spending"
+    "add-form-radio-spending" //지출 radio 버튼
   );
 
-  const addFormSelect = document.getElementById("add-form-category-select");
+  const addFormSelect = document.getElementById("add-form-category-select"); //select box
 
-  handleSelectOption();
+  handleSelectOption(); //최초 설정
   addFormRadioIncome.addEventListener("click", handleSelectOption);
-  addFormRadioSpending.addEventListener("click", handleSelectOption);
+  addFormRadioSpending.addEventListener("click", handleSelectOption); //radio 버튼을 클릭할 때마다 select box 옵션을 변경한다.
 
+  /* select box 옵션을 동적으로 변경하는 함수 */
   function handleSelectOption() {
     const currentOption = addFormRadioIncome.checked
       ? incomeCategoryData
@@ -173,14 +174,26 @@ function handleItemAdd(list) {
 
   const addBtn = document.getElementById("add-btn"); //아이템 등록 버튼
   const addModal = document.getElementById("add-btn-modal"); //모달
-  const deleteModalConfirmBtn = document.getElementById("add-form-submit-btn"); //모달 확인 버튼
-  const deleteModalCancelBtn = document.getElementById("add-form-cancel-btn"); //모달 취소 버튼
+  const addModalConfirmBtn = document.getElementById("add-form-submit-btn"); //모달 확인 버튼
+  const addModalCancelBtn = document.getElementById("add-form-cancel-btn"); //모달 취소 버튼
 
   addBtn.addEventListener("click", () => {
     addModal.style.display = "flex";
   });
 
-  deleteModalCancelBtn.addEventListener("click", () => {
+  addModalCancelBtn.addEventListener("click", () => {
     addModal.style.display = "none";
+  });
+
+  const costInput = document.getElementById("add-form-cost-input");
+  const nameInput = document.getElementById("add-form-name-input");
+
+  addModalConfirmBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (!addFormSelect.value || !costInput.value || !nameInput.value) {
+      alert("모든 항목을 입력해 주세요.");
+    } else if (isNaN(costInput.value)) {
+      alert("금액은 숫자로 입력해 주세요.");
+    }
   });
 }
