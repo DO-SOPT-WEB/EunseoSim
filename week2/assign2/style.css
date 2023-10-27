@@ -377,3 +377,50 @@ input[type="radio"]:checked + label {
   display: flex;
   gap: 2rem;
 }
+
+#add-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  font-size: 1.6rem;
+
+  width: 100%;
+}
+
+.add-form-radios {
+  margin: 2rem 0;
+}
+
+#add-form > div {
+  display: flex;
+  gap: 1rem;
+  align-items: end;
+  height: 3rem;
+}
+
+#add-form input {
+  border-bottom: 0.1rem solid var(--dark-gray-color);
+}
+
+select {
+  width: 17rem;
+  border: 0.1rem solid var(--gray-color);
+  border-radius: 1rem;
+  padding: 0.3rem 1rem;
+}
+
+input[type="text"]::placeholder {
+  color: var(--gray-color);
+}
+
+#add-form-submit-btn {
+  background-color: var(--yellow-color);
+
+  border-radius: 1rem;
+
+  padding: 1rem 3rem;
+  margin-top: 2rem;
+}
