@@ -111,7 +111,6 @@ function handleFilterBtnClick(list) {
 
 /* 리스트 아이템 삭제 모달을 열고 닫는 함수 */
 function handleItemDeleteModal(list) {
-  console.log("handleItemDeleteModal작동");
   const deleteModal = document.getElementById("delete-btn-modal"); //모달
   const deleteModalConfirmBtn = document.getElementById("delete-btn-confirm"); //모달 확인 버튼
   const deleteModalCancelBtn = document.getElementById("delete-btn-cancel"); //모달 취소 버튼
