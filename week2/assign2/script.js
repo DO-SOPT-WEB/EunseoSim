@@ -91,17 +91,35 @@ function handleFilterBtnClick(list) {
 
 /* 리스트 아이템 삭제를 동작시키는 함수 */
 function handleItemDelete(list) {
+  const deleteModal = document.getElementById("delete-btn-modal"); //모달
+  const deleteModalConfirmBtn = document.getElementById("delete-btn-confirm"); //모달 확인 버튼
+  const deleteModalCancelBtn = document.getElementById("delete-btn-cancel"); //모달 취소 버튼
+
   const deleteBtns = document.querySelectorAll(".delete-btn");
   deleteBtns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
-      e.target.parentElement.remove(); //화면(DOM)상에서 아이템 삭제
+      let targetElement = e.target.parentElement;
 
-      const targetId = parseInt(e.target.parentElement.id); //지워지는 아이템의 id
-      list = list.filter((item) => item.customId != targetId); //리스트에서 삭제한 아이템을 지움
+      deleteModal.style.display = "flex";
+      deleteModalCancelBtn.addEventListener("click", () => {
+        deleteModal.style.display = "none";
+        targetElement = undefined;
+      });
 
-      localStorage.setItem("list_data", JSON.stringify(list)); //localStorage에 반영
+      deleteModalConfirmBtn.addEventListener("click", () => {
+        deleteModal.style.display = "none";
 
-      countBalance(list); //나의 자산, 총 수입/지출에 반영
+        if (targetElement) {
+          targetElement && targetElement.remove(); //화면(DOM)상에서 아이템 삭제
+
+          const targetId = parseInt(targetElement.id); //지워지는 아이템의 id
+          list = list.filter((item) => item.customId != targetId); //리스트에서 삭제한 아이템을 지움
+
+          localStorage.setItem("list_data", JSON.stringify(list)); //localStorage에 반영
+
+          countBalance(list); //나의 자산, 총 수입/지출에 반영
+        }
+      });
     });
   });
 }

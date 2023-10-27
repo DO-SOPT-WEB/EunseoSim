@@ -271,3 +271,49 @@ li > h4 {
 
   cursor: pointer;
 }
+
+/* delete button modal */
+
+#delete-btn-modal {
+  background-color: #0000005a;
+  width: 100vw;
+  height: 100vh;
+
+  position: fixed;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-btn-modal__content {
+  background-color: var(--gray-color);
+
+  padding: 2rem;
+  width: 25rem;
+  height: 15rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  border-radius: 1.5rem;
+}
+
+.delete-btn-modal__content > h3 {
+  font-size: 1.6rem;
+  color: var(--white-color);
+}
+
+.delete-btn-modal__content button {
+  font-size: 1.2rem;
+
+  background-color: var(--yellow-color);
+
+  padding: 1rem 2rem;
+  margin: 0 0.5rem;
+
+  border-radius: 1rem;
+}
