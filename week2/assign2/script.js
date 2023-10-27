@@ -2,7 +2,9 @@ import { INIT_BALANCE } from "./data.js";
 import { LIST_DATA } from "./data.js";
 
 let listData = []; //localStorage에 저장된 목록을 가져와 저장하는 배열
-let balance = INIT_BALANCE; //나의 자산
+let balance = INIT_BALANCE; //나의 총 자산
+let income = INIT_BALANCE; //총 수입
+let spending = INIT_BALANCE; //총 지출
 
 window.onload = () => {
   //localStorage 초기화
@@ -14,18 +16,26 @@ window.onload = () => {
   renderList(listData);
 };
 
+/* 계산된 나의 자산과 총 수입, 지출을 렌더링하는 함수 */
 function countBalance() {
   const balanceNode = document.getElementById("balance");
   balanceNode.innerText = balance.toLocaleString() + "원";
+
+  const incomeNode = document.getElementById("income-text");
+  incomeNode.innerText = income.toLocaleString() + "원";
+
+  const spendingNode = document.getElementById("spending-text");
+  spendingNode.innerText = spending.toLocaleString() + "원";
 }
 
-//list를 탐색하면서 요소를 하나씩 가계부 내역으로 렌더링하는 함수
+/* list를 탐색하면서 요소를 하나씩 가계부 내역으로 렌더링하는 함수 */
 function renderList(list) {
   const listWrapper = document.getElementById("list-wrapper"); //리스트가 들어갈 부모 노드
   const itemTemplate = document.getElementById("item-template"); //하나의 가계부 내역 아이템 템플릿
 
   list.forEach((item) => {
     balance += item.cost;
+    item.cost < 0 ? (spending += item.cost) : (income += item.cost);
 
     let itemContent = itemTemplate.cloneNode(true); //템플릿 복사
     let itemNewHtml = itemContent.innerHTML; //템플릿 안의 html 복사
