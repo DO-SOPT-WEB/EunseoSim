@@ -192,6 +192,7 @@ function handleItemAdd(list) {
     let value = e.target.value;
     value = Number(value.replaceAll(",", ""));
     if (isNaN(value)) {
+      alert("금액은 숫자로 입력해 주세요.");
       costInput.value = "";
     } else {
       costInput.value = value.toLocaleString();
