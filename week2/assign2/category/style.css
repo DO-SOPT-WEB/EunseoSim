@@ -68,7 +68,7 @@ article > h2 {
 }
 
 .category-list {
-  width: 30rem;
+  width: 31rem;
 
   background-color: var(--white-color);
 
@@ -84,6 +84,7 @@ article > h2 {
 
 .category-list > ol {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
