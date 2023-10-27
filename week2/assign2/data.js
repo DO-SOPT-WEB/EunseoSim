@@ -25,3 +25,7 @@ export const LIST_DATA = [
     cost: -99000,
   },
 ];
+
+export const INCOME_CATEGORY = ["월급", "용돈"];
+
+export const SPENDING_CATEGORY = ["식비", "쇼핑", "취미"];
