@@ -232,6 +232,10 @@ li > h4 {
   color: var(--blue-color);
 }
 
+.text-income {
+  color: var(--red-color);
+}
+
 /* bottom plus button */
 .bottom-plus-btn {
   width: 100%;

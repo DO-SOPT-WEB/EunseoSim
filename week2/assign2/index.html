@@ -23,9 +23,9 @@
     </section>
     <main>
       <div class="date">
-        <button type="button"><</button>
+        <button type="button">&lt;</button>
         <span>10월 13일</span>
-        <button type="button">></button>
+        <button type="button">&gt;</button>
       </div>
       <div class="overall-list">
         <div class="sub-menu">
@@ -42,92 +42,23 @@
             <label for="checkbox-spending">지출</label>
           </div>
         </div>
-        <ol>
+        <ol id="list-wrapper"></ol>
+
+        <template id="item-template">
           <li>
             <div class="title">
-              <small>식비</small>
-              <h3>크라이치즈버거 역곡점</h3>
+              <small>{item-category}</small>
+              <h3>{item-name}</h3>
             </div>
-            <h4 class="text-spending">-10,800원</h4>
+            <h4 class="text-{item-type}">{item-cost}원</h4>
             <button class="delete-btn" type="button">X</button>
           </li>
-          <li>
-            <div class="title">
-              <small>취미</small>
-              <h3>포토그레이 부천점</h3>
-            </div>
-            <h4 class="text-spending">-4,000원</h4>
-            <button class="delete-btn" type="button">X</button>
-          </li>
-          <li>
-            <div class="title">
-              <small>월급</small>
-              <h3>근로장학🤑돈💰내놔🔫돈💰내놔🔫돈💰내놔🔫</h3>
-            </div>
-            <h4>300,000원</h4>
-            <button class="delete-btn" type="button">X</button>
-          </li>
-          <li>
-            <div class="title">
-              <small>쇼핑</small>
-              <h3>풋락커 커먼그라운드점</h3>
-            </div>
-            <h4 class="text-spending">-99,000원</h4>
-            <button class="delete-btn" type="button">X</button>
-          </li>
-          <li>
-            <div class="title">
-              <small>식비</small>
-              <h3>지에스25 역곡본점</h3>
-            </div>
-            <h4 class="text-spending">-4,200원</h4>
-            <button class="delete-btn" type="button">x</button>
-          </li>
-          <li>
-            <div class="title">
-              <small>월급</small>
-              <h3>근로장학</h3>
-            </div>
-            <h4>300,000원</h4>
-            <button class="delete-btn" type="button">X</button>
-          </li>
-          <li>
-            <div class="title">
-              <small>월급</small>
-              <h3>근로장학</h3>
-            </div>
-            <h4>300,000원</h4>
-            <button class="delete-btn" type="button">X</button>
-          </li>
-          <li>
-            <div class="title">
-              <small>월급</small>
-              <h3>근로장학</h3>
-            </div>
-            <h4>300,000원</h4>
-            <button class="delete-btn" type="button">X</button>
-          </li>
-          <li>
-            <div class="title">
-              <small>월급</small>
-              <h3>근로장학</h3>
-            </div>
-            <h4>300,000원</h4>
-            <button class="delete-btn" type="button">X</button>
-          </li>
-          <li>
-            <div class="title">
-              <small>월급</small>
-              <h3>근로장학</h3>
-            </div>
-            <h4>300,000원</h4>
-            <button class="delete-btn" type="button">X</button>
-          </li>
-        </ol>
+        </template>
       </div>
     </main>
     <div class="bottom-plus-btn">
       <button type="button">+</button>
     </div>
+    <script type="module" src="script.js"></script>
   </body>
 </html>

@@ -1,5 +1,5 @@
-const INIT_BALANCE = 0;
-const HISTORY_LIST = [
+export const INIT_BALANCE = 0;
+export const LIST_DATA = [
   {
     category: "식비",
     name: "크라이치즈버거 역곡점",
