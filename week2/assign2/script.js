@@ -188,6 +188,16 @@ function handleItemAdd(list) {
   const costInput = document.getElementById("add-form-cost-input");
   const nameInput = document.getElementById("add-form-name-input");
 
+  costInput.addEventListener("keyup", (e) => {
+    let value = e.target.value;
+    value = Number(value.replaceAll(",", ""));
+    if (isNaN(value)) {
+      costInput.value = "";
+    } else {
+      costInput.value = value.toLocaleString();
+    }
+  });
+
   addModalConfirmBtn.addEventListener("click", (e) => {
     e.preventDefault();
     if (!addFormSelect.value || !costInput.value || !nameInput.value) {
