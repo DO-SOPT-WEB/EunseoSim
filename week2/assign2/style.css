@@ -326,7 +326,7 @@ li > h4 {
 
   position: fixed;
 
-  /* display: none; */
+  display: none;
   justify-content: center;
   align-items: center;
 }
@@ -338,20 +338,20 @@ li > h4 {
 .add-btn-modal__content {
   background-color: var(--white-color);
 
-  padding: 2rem;
+  padding: 4rem;
   width: 100vw;
-  height: 40rem;
+  height: 45rem;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 1rem;
 
   position: absolute;
   bottom: 0;
 
-  border-radius: 1.5rem;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
 }
 
 .add-form-radios {
@@ -362,15 +362,16 @@ input[type="radio"] + label {
   padding: 0.8rem 3rem;
   border-radius: 0.5rem;
 
-  background-color: var(--gray-color);
-  color: var(--white-color);
+  color: var(--gray-color);
+  border: 0.1rem solid var(--gray-color);
 
   font-size: 1.6rem;
 }
 
 input[type="radio"]:checked + label {
-  background-color: var(--dark-yellow-color);
-  color: var(--dark-gray-color);
+  background-color: var(--gray-color);
+  border: none;
+  color: var(--white-color);
 }
 
 .add-form-radios {
@@ -423,4 +424,25 @@ input[type="text"]::placeholder {
 
   padding: 1rem 3rem;
   margin-top: 2rem;
+}
+
+#add-form-cancel-btn {
+  background-color: var(--gray-color);
+  color: var(--white-color);
+
+  border-radius: 1rem;
+
+  padding: 1rem 3rem;
+}
+
+#add-form-buttons {
+  display: flex;
+  flex-direction: column;
+
+  width: 22rem;
+}
+
+#add-form-buttons > button {
+  width: 100%;
+  text-align: center;
 }

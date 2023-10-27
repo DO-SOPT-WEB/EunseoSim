@@ -17,6 +17,7 @@ window.onload = () => {
   countBalance(listData);
   handleFilterBtnClick(listData);
   handleItemDelete(listData);
+  handleItemAdd(listData);
 };
 
 /* 계산된 나의 자산과 총 수입, 지출을 렌더링하는 함수 */
@@ -121,5 +122,20 @@ function handleItemDelete(list) {
         }
       });
     });
+  });
+}
+
+function handleItemAdd(list) {
+  const addBtn = document.getElementById("add-btn"); //아이템 등록 버튼
+  const addModal = document.getElementById("add-btn-modal"); //모달
+  const deleteModalConfirmBtn = document.getElementById("add-form-submit-btn"); //모달 확인 버튼
+  const deleteModalCancelBtn = document.getElementById("add-form-cancel-btn"); //모달 취소 버튼
+
+  addBtn.addEventListener("click", () => {
+    addModal.style.display = "flex";
+  });
+
+  deleteModalCancelBtn.addEventListener("click", () => {
+    addModal.style.display = "none";
   });
 }
