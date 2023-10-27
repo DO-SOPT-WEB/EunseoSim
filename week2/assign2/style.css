@@ -317,3 +317,63 @@ li > h4 {
 
   border-radius: 1rem;
 }
+
+/* add button modal */
+#add-btn-modal {
+  background-color: #0000005a;
+  width: 100vw;
+  height: 100vh;
+
+  position: fixed;
+
+  /* display: none; */
+  justify-content: center;
+  align-items: center;
+}
+
+.add-btn-modal__content > h3 {
+  font-size: 2rem;
+}
+
+.add-btn-modal__content {
+  background-color: var(--white-color);
+
+  padding: 2rem;
+  width: 100vw;
+  height: 40rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  position: absolute;
+  bottom: 0;
+
+  border-radius: 1.5rem;
+}
+
+.add-form-radios {
+  margin-top: 2rem;
+}
+
+input[type="radio"] + label {
+  padding: 0.8rem 3rem;
+  border-radius: 0.5rem;
+
+  background-color: var(--gray-color);
+  color: var(--white-color);
+
+  font-size: 1.6rem;
+}
+
+input[type="radio"]:checked + label {
+  background-color: var(--dark-yellow-color);
+  color: var(--dark-gray-color);
+}
+
+.add-form-radios {
+  display: flex;
+  gap: 2rem;
+}

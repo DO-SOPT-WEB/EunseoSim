@@ -59,7 +59,7 @@
       </div>
     </main>
     <div class="bottom-plus-btn">
-      <button type="button">+</button>
+      <button type="button" id="add-btn">+</button>
     </div>
 
     <aside id="delete-btn-modal">
@@ -69,6 +69,35 @@
           <button type="button" id="delete-btn-confirm">확인</button>
           <button type="button" id="delete-btn-cancel">취소</button>
         </div>
+      </div>
+    </aside>
+
+    <aside id="add-btn-modal">
+      <div class="add-btn-modal__content">
+        <h3>내역 추가</h3>
+        <form>
+          <div class="add-form-radios">
+            <div>
+              <input
+                id="add-form-radio-income"
+                type="radio"
+                name="add-form"
+                value="income"
+                checked
+              />
+              <label for="add-form-radio-income">수입</label>
+            </div>
+            <div>
+              <input
+                id="add-form-radio-spending"
+                type="radio"
+                name="add-form"
+                value="spending"
+              />
+              <label for="add-form-radio-spending">지출</label>
+            </div>
+          </div>
+        </form>
       </div>
     </aside>
     <script type="module" src="script.js"></script>
