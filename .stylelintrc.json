@@ -1,0 +1,6 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-config-recess-order"],
+  "reportDescriptionlessDisables": true,
+  "reportNeedlessDisables": true,
+  "rules": { "unit-allowed-list": ["%", "deg", "px", "rem", "ms"] }
+}
