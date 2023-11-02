@@ -1,0 +1,51 @@
+#root {
+  max-width: 1280px;
+  padding: 2rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.logo {
+  height: 6rem;
+  padding: 1.5rem;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+/* stylelint-disable no-duplicate-selectors -- 설명을 추가 */
+
+.logo {
+  margin: 10rem;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2rem #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2rem #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20ms linear;
+  }
+}
+
+.card {
+  padding: 2rem;
+}
+
+.read-the-docs {
+  color: #888;
+}
