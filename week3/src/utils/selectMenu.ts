@@ -34,7 +34,7 @@ export const convertStringToName: { [key: string]: string } = {
 
 export const selectMenu = (input: inputState) => {
   let finalString = '';
-  console.log(input.recommendType);
+
   switch (input.recommendType) {
     case '취향':
       if (input.country && input.ingredients && input.broth) {
@@ -48,7 +48,6 @@ export const selectMenu = (input: inputState) => {
       finalString += ['K', 'J', 'C'][Math.floor(Math.random() * 3)];
       finalString += ['R', 'N', 'M'][Math.floor(Math.random() * 3)];
       finalString += ['O', 'X'][Math.floor(Math.random() * 2)];
-      console.log(finalString);
       return finalString;
     default:
       return finalString;

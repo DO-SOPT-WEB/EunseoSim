@@ -7,6 +7,10 @@ interface CountDownType {
 
 const CountDown = ({ count, setCount }: CountDownType) => {
   useEffect(() => {
+    setCount(3);
+  }, []);
+
+  useEffect(() => {
     setTimeout(() => {
       count > 0 && setCount(count - 1);
     }, 1000);

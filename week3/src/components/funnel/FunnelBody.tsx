@@ -1,5 +1,4 @@
 import { broth, country, ingredients, inputState, recommendType } from '../../types/states';
-import { useEffect, useState } from 'react';
 
 import CountDown from '../CountDown';
 import SelectBtn from '../common/SelectBtn';
@@ -7,6 +6,7 @@ import StepBtn from '../common/StepBtn';
 import { convertStringToName } from '../../utils/selectMenu';
 import { selectMenu } from '../../utils/selectMenu';
 import styled from 'styled-components';
+import { useState } from 'react';
 
 interface FunnelBodyProps {
   step: number;
@@ -182,7 +182,7 @@ const FunnelBody = ({ step, setStep, input, setInput }: FunnelBodyProps) => {
           ),
           4: (
             <>
-              {count > 0 ? (
+              {count > 0 && input.recommendType === '랜덤' ? (
                 <CountDown count={count} setCount={setCount} />
               ) : (
                 selectedMenu && (
