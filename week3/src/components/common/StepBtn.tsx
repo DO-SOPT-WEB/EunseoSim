@@ -30,7 +30,7 @@ const StepBtnDefaultStyle = css`
 
   border: 0.5rem solid ${({ theme }) => theme.colors.black};
   border-radius: 3rem;
-  background-color: ${({ theme }) => theme.colors.red};
+  background-color: ${({ theme }) => theme.colors.secondary};
   color: ${({ theme }) => theme.colors.black};
 `;
 

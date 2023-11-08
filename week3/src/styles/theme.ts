@@ -1,8 +1,8 @@
 import { DefaultTheme, css } from 'styled-components';
 
 const colors = {
-  yellow: '#F0C24C',
-  red: '#FF6B4A',
+  primary: '#F0C24C',
+  secondary: '#FF6B4A',
   grayLight: '#D9D9D9',
   grayDark: '#707070',
   black: '#000000',

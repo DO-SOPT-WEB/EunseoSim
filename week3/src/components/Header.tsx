@@ -6,7 +6,7 @@ const Header = () => {
 export default Header;
 
 const HeaderWrapper = styled.header`
-  background-color: ${({ theme }) => theme.colors.yellow};
+  background-color: ${({ theme }) => theme.colors.primary};
   color: ${({ theme }) => theme.colors.black};
   ${({ theme }) => theme.fonts.Title1}
 

@@ -22,22 +22,26 @@ const SelectBtnDefaultStyle = css`
   justify-content: center;
 
   width: 100%;
-  height: 20rem;
+  height: 30rem;
 
   ${({ theme }) => theme.fonts.Head1}
 
   cursor: pointer;
 
-  border: 0.5rem solid ${({ theme }) => theme.colors.black};
+  border: none;
   border-radius: 3rem;
   background-color: ${({ theme }) => theme.colors.grayLight};
   color: ${({ theme }) => theme.colors.black};
+
+  &:hover {
+    border: 0.5rem solid ${({ theme }) => theme.colors.black};
+  }
 `;
 
 const SelectBtnStateStyle = {
   selected: css`
     ${SelectBtnDefaultStyle};
-    background-color: ${({ theme }) => theme.colors.yellow};
+    background-color: ${({ theme }) => theme.colors.primary};
     border: 0.5rem solid ${({ theme }) => theme.colors.black};
   `,
 };

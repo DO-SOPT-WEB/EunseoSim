@@ -1,19 +1,24 @@
+import { inputState, stepState } from '../../types/states';
+
 import FunnelBody from './FunnelBody';
 import FunnelTitle from './FunnelTitle';
-import { recommendTypeState } from '../../types/states';
-import { stepState } from '../../types/states';
 import styled from 'styled-components';
 import { useState } from 'react';
 
 const FunnelLayout = () => {
   const [step, setStep] = useState<stepState>(0);
-  const [recommendType, setRecommendType] = useState<recommendTypeState>(undefined);
+  const [input, setInput] = useState<inputState>({
+    recommendType: undefined,
+    country: undefined,
+    ingredients: undefined,
+    broth: undefined,
+  });
 
   return (
     <>
       <FunnelLayoutWrapper>
         <FunnelTitle step={step} />
-        <FunnelBody step={step} recommendType={recommendType} setRecommendType={setRecommendType}></FunnelBody>
+        <FunnelBody step={step} setStep={setStep} input={input} setInput={setInput} />
       </FunnelLayoutWrapper>
     </>
   );
