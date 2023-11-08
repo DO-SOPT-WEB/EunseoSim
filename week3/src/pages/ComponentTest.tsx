@@ -1,11 +1,13 @@
-import Button from '../components/common/Button';
-import React from 'react';
+import SelectBtn from '../components/common/SelectBtn';
+import StepBtn from '../components/common/StepBtn';
 
 const ComponentTest = () => {
   return (
     <div>
-      <Button type={'primaryActive'}>primaryActive</Button>
-      <Button type={'primaryDisabled'}>primaryActive</Button>
+      <SelectBtn>selectBtn default</SelectBtn>
+      <SelectBtn type={'selected'}>selectBtn selected</SelectBtn>
+      <StepBtn>stepBtn default</StepBtn>
+      <StepBtn type={'disabled'}>stepBtn disabled</StepBtn>
     </div>
   );
 };

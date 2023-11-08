@@ -4,11 +4,10 @@ declare module 'styled-components' {
   export interface DefaultTheme {
     colors: {
       yellow: string;
-      green: string;
-      blue: string;
-      black: string;
-      grayDark: string;
+      red: string;
       grayLight: string;
+      grayDark: string;
+      black: string;
     };
     fonts: {
       Head1: SerializedStyles;

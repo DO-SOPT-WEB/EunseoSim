@@ -2,11 +2,10 @@ import { DefaultTheme, css } from 'styled-components';
 
 const colors = {
   yellow: '#F0C24C',
-  green: '#5AC540',
-  blue: '#53A3ED',
-  black: '#000000',
+  red: '#FF6B4A',
+  grayLight: '#D9D9D9',
   grayDark: '#707070',
-  grayLight: '#D3D3D3',
+  black: '#000000',
 };
 
 const fonts = {

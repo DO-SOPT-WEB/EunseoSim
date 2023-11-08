@@ -8,7 +8,8 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <FunnelLayout />
+      <ComponentTest />
+      {/* <FunnelLayout /> */}
     </ThemeProvider>
   );
 }
