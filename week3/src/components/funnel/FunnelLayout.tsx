@@ -33,7 +33,7 @@ const FunnelLayoutWrapper = styled.div`
   align-items: center;
 
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 15rem);
 
   background-color: ${({ theme }) => theme.colors.white};
   border: 0.5rem solid ${({ theme }) => theme.colors.black};

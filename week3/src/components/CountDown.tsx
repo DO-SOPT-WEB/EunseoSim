@@ -23,7 +23,7 @@ const CountDownWrapper = styled.div`
   align-items: center;
 
   width: 50rem;
-  height: 50rem;
+  height: 40rem;
 
   ${({ theme }) => theme.fonts.Title1}
 

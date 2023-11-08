@@ -22,7 +22,7 @@ const SelectBtnDefaultStyle = css`
   justify-content: center;
 
   width: 100%;
-  height: 30rem;
+  height: 20rem;
 
   ${({ theme }) => theme.fonts.Head1}
 

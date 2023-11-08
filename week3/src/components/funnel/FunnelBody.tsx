@@ -225,13 +225,13 @@ const StepBtnsWrapper = styled.div`
 
 const ImgWrapper = styled.img`
   width: 30rem;
-  height: 30rem;
+  height: 20rem;
 
   border-radius: 5rem;
 
   object-fit: cover;
 
-  margin-top: 5rem;
+  margin-top: 3rem;
 `;
 
 const SelectedMenuWrapper = styled.span`
