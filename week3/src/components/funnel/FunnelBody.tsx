@@ -210,7 +210,7 @@ const SelectBtnsWrapper = styled.div`
   display: flex;
   gap: 4rem;
 
-  margin-top: 10rem;
+  margin-top: 5rem;
 `;
 
 const StepBtnsWrapper = styled.div`

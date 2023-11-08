@@ -18,7 +18,7 @@ const FunnelLayout = () => {
     <>
       <FunnelLayoutWrapper>
         <Header setStep={setStep} setInput={setInput} input={input} />
-        <FunnelTitle step={step} />
+        <FunnelTitle step={step} input={input} />
         <FunnelBody step={step} setStep={setStep} input={input} setInput={setInput} />
       </FunnelLayoutWrapper>
     </>
