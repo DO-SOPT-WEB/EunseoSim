@@ -13,7 +13,7 @@ const FunnelLayout = () => {
     <>
       <FunnelLayoutWrapper>
         <FunnelTitle step={step} />
-        <FunnelBody step={step} recommendType={recommendType}></FunnelBody>
+        <FunnelBody step={step} recommendType={recommendType} setRecommendType={setRecommendType}></FunnelBody>
       </FunnelLayoutWrapper>
     </>
   );
