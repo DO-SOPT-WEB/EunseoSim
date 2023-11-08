@@ -1,5 +1,6 @@
 import FunnelBody from './FunnelBody';
 import FunnelTitle from './FunnelTitle';
+import Header from '../Header';
 import { inputState } from '../../types/states';
 import styled from 'styled-components';
 import { useState } from 'react';
@@ -16,6 +17,7 @@ const FunnelLayout = () => {
   return (
     <>
       <FunnelLayoutWrapper>
+        <Header setStep={setStep} setInput={setInput} input={input} />
         <FunnelTitle step={step} />
         <FunnelBody step={step} setStep={setStep} input={input} setInput={setInput} />
       </FunnelLayoutWrapper>

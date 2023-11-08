@@ -1,8 +1,7 @@
-import { stepState } from '../../types/states';
 import styled from 'styled-components';
 
 interface FunnelTitleProps {
-  step: stepState;
+  step: number;
 }
 
 const FunnelTitle = ({ step }: FunnelTitleProps) => {

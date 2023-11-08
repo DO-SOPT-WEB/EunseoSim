@@ -1,4 +1,3 @@
-import ComponentTest from './pages/ComponentTest';
 import FunnelLayout from './components/funnel/FunnelLayout';
 import GlobalStyle from './styles/globalStyle';
 import Header from './components/Header';
@@ -9,7 +8,6 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Header />
       {/* <ComponentTest /> */}
       <FunnelLayout />
     </ThemeProvider>

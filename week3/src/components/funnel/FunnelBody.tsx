@@ -2,8 +2,10 @@ import { broth, country, ingredients, inputState, recommendType } from '../../ty
 
 import SelectBtn from '../common/SelectBtn';
 import StepBtn from '../common/StepBtn';
+import { convertStringToName } from '../../utils/selectMenu';
 import { selectMenu } from '../../utils/selectMenu';
 import styled from 'styled-components';
+import { useState } from 'react';
 
 interface FunnelBodyProps {
   step: number;
@@ -13,6 +15,8 @@ interface FunnelBodyProps {
 }
 
 const FunnelBody = ({ step, setStep, input, setInput }: FunnelBodyProps) => {
+  const [selectedMenu, setSelectedMenu] = useState<undefined | string>(undefined);
+
   const handleRecommendType = (recommendType?: recommendType) => {
     setInput((prev: inputState) => {
       return { ...prev, recommendType: recommendType };
@@ -38,10 +42,15 @@ const FunnelBody = ({ step, setStep, input, setInput }: FunnelBodyProps) => {
   };
 
   const handleStepStartBtn = () => {
-    setStep(input.recommendType === '취향' ? 1 : 4);
+    input.recommendType === '취향' ? setStep(1) : (setSelectedMenu(selectMenu(input)), setStep(4));
   };
 
-  const handleStepBtn = (type: '이전으로' | '다음으로') => {
+  const handleStepBtn = (type: '이전으로' | '다음으로' | '결과보기') => {
+    if (type === '결과보기') {
+      setStep(4);
+      setSelectedMenu(selectMenu(input));
+      return;
+    }
     setStep(type === '이전으로' ? step - 1 : step + 1);
   };
 
@@ -147,21 +156,27 @@ const FunnelBody = ({ step, setStep, input, setInput }: FunnelBodyProps) => {
               <StepBtnsWrapper>
                 <StepBtn onClick={() => handleStepBtn('이전으로')}>이전으로</StepBtn>
                 <StepBtn
-                  onClick={() => handleStepBtn('다음으로')}
+                  onClick={() => handleStepBtn('결과보기')}
                   type={input.broth === undefined ? 'disabled' : undefined}>
-                  다음으로
+                  결과보기
                 </StepBtn>
               </StepBtnsWrapper>
             </>
           ),
           4: (
             <>
-              <SelectBtn
-                onClick={() => {
-                  console.log(selectMenu(input));
-                }}>
-                테스트
-              </SelectBtn>
+              {selectedMenu && (
+                <ResultWrapper>
+                  <ImgWrapper src={`src/assets/image/${selectedMenu}.jpeg`} alt={convertStringToName[selectedMenu]} />
+                  <SelectedMenuWrapper>✱{convertStringToName[selectedMenu]}✱</SelectedMenuWrapper>
+                  <StepBtn
+                    onClick={() => {
+                      setStep(0);
+                    }}>
+                    다시하기
+                  </StepBtn>
+                </ResultWrapper>
+              )}
             </>
           ),
         }[step]
@@ -189,4 +204,28 @@ const StepBtnsWrapper = styled.div`
   gap: 4rem;
 
   margin-top: 7rem;
+`;
+
+const ImgWrapper = styled.img`
+  width: 30rem;
+  height: 30rem;
+
+  border-radius: 5rem;
+
+  object-fit: cover;
+
+  margin-top: 5rem;
+`;
+
+const SelectedMenuWrapper = styled.span`
+  ${({ theme }) => theme.fonts.Head1}
+  text-align:center;
+`;
+
+const ResultWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
 `;
