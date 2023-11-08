@@ -9,7 +9,7 @@ const FunnelTitle = ({ step }: FunnelTitleProps) => {
   return (
     <FunnelTitleWrapper>
       {step === 0
-        ? '원하는 추천 방식을 골라줘!'
+        ? '어떻게 추천해줄까?'
         : step === 1
         ? '오늘은 어떤 종류가 먹고싶어?'
         : step === 2

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 const Header = () => {
-  return <HeaderWrapper>Header</HeaderWrapper>;
+  return <HeaderWrapper>🍚믄서가 골라주는 점심 메뉴🍚</HeaderWrapper>;
 };
 
 export default Header;

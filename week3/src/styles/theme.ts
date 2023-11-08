@@ -13,10 +13,11 @@ const fonts = {
   Title1: css`
     font-family: 'DOSPilgiMedium';
     font-size: 5rem;
+    padding-bottom: 4rem;
   `,
   Head1: css`
     font-family: 'DOSPilgiMedium';
-    font-size: 2rem;
+    font-size: 3rem;
   `,
 };
 
