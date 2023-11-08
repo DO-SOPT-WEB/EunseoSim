@@ -45,13 +45,28 @@ const FunnelBody = ({ step, setStep, input, setInput }: FunnelBodyProps) => {
     input.recommendType === '취향' ? setStep(1) : (setSelectedMenu(selectMenu(input)), setStep(4));
   };
 
-  const handleStepBtn = (type: '이전으로' | '다음으로' | '결과보기') => {
-    if (type === '결과보기') {
-      setStep(4);
-      setSelectedMenu(selectMenu(input));
-      return;
+  const handleStepBtn = (type: '이전으로' | '다음으로' | '결과보기' | '다시하기') => {
+    switch (type) {
+      case '이전으로':
+        setStep(step - 1);
+        break;
+      case '다음으로':
+        setStep(step + 1);
+        break;
+      case '결과보기':
+        setStep(4);
+        setSelectedMenu(selectMenu(input));
+        break;
+      case '다시하기':
+        setStep(0);
+        setInput({
+          recommendType: input.recommendType,
+          country: undefined,
+          ingredients: undefined,
+          broth: undefined,
+        });
+        break;
     }
-    setStep(type === '이전으로' ? step - 1 : step + 1);
   };
 
   return (
@@ -169,12 +184,7 @@ const FunnelBody = ({ step, setStep, input, setInput }: FunnelBodyProps) => {
                 <ResultWrapper>
                   <ImgWrapper src={`src/assets/image/${selectedMenu}.jpeg`} alt={convertStringToName[selectedMenu]} />
                   <SelectedMenuWrapper>✱{convertStringToName[selectedMenu]}✱</SelectedMenuWrapper>
-                  <StepBtn
-                    onClick={() => {
-                      setStep(0);
-                    }}>
-                    다시하기
-                  </StepBtn>
+                  <StepBtn onClick={() => handleStepBtn('다시하기')}>다시하기</StepBtn>
                 </ResultWrapper>
               )}
             </>
