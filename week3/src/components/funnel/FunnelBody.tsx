@@ -1,11 +1,12 @@
 import { broth, country, ingredients, inputState, recommendType } from '../../types/states';
+import { useEffect, useState } from 'react';
 
+import CountDown from '../CountDown';
 import SelectBtn from '../common/SelectBtn';
 import StepBtn from '../common/StepBtn';
 import { convertStringToName } from '../../utils/selectMenu';
 import { selectMenu } from '../../utils/selectMenu';
 import styled from 'styled-components';
-import { useState } from 'react';
 
 interface FunnelBodyProps {
   step: number;
@@ -16,6 +17,7 @@ interface FunnelBodyProps {
 
 const FunnelBody = ({ step, setStep, input, setInput }: FunnelBodyProps) => {
   const [selectedMenu, setSelectedMenu] = useState<undefined | string>(undefined);
+  const [count, setCount] = useState(3);
 
   const handleRecommendType = (recommendType?: recommendType) => {
     setInput((prev: inputState) => {
@@ -58,6 +60,7 @@ const FunnelBody = ({ step, setStep, input, setInput }: FunnelBodyProps) => {
         break;
       case '다시하기':
         setStep(0);
+        setCount(3);
         setInput({
           recommendType: input.recommendType,
           country: undefined,
@@ -179,12 +182,16 @@ const FunnelBody = ({ step, setStep, input, setInput }: FunnelBodyProps) => {
           ),
           4: (
             <>
-              {selectedMenu && (
-                <ResultWrapper>
-                  <ImgWrapper src={`src/assets/image/${selectedMenu}.jpeg`} alt={convertStringToName[selectedMenu]} />
-                  <SelectedMenuWrapper>✱{convertStringToName[selectedMenu]}✱</SelectedMenuWrapper>
-                  <StepBtn onClick={() => handleStepBtn('다시하기')}>다시하기</StepBtn>
-                </ResultWrapper>
+              {count > 0 ? (
+                <CountDown count={count} setCount={setCount} />
+              ) : (
+                selectedMenu && (
+                  <ResultWrapper>
+                    <ImgWrapper src={`src/assets/image/${selectedMenu}.jpeg`} alt={convertStringToName[selectedMenu]} />
+                    <SelectedMenuWrapper>✱{convertStringToName[selectedMenu]}✱</SelectedMenuWrapper>
+                    <StepBtn onClick={() => handleStepBtn('다시하기')}>다시하기</StepBtn>
+                  </ResultWrapper>
+                )
               )}
             </>
           ),
