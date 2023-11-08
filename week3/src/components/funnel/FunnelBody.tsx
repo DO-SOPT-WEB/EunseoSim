@@ -24,6 +24,18 @@ const FunnelBody = ({ step, setStep, input, setInput }: FunnelBodyProps) => {
     });
   };
 
+  const handleIngredients = (ingredients?: '밥' | '면' | '고기/해물') => {
+    setInput((prev: inputState) => {
+      return { ...prev, ingredients: ingredients };
+    });
+  };
+
+  const handleBroth = (broth?: boolean) => {
+    setInput((prev: inputState) => {
+      return { ...prev, broth: broth };
+    });
+  };
+
   const handleStepStartBtn = () => {
     setStep(input.recommendType === '취향' ? 1 : 4);
   };
@@ -90,8 +102,53 @@ const FunnelBody = ({ step, setStep, input, setInput }: FunnelBodyProps) => {
               </StepBtnsWrapper>
             </>
           ),
-          2: <>2</>,
-          3: <>3</>,
+          2: (
+            <>
+              <SelectBtnsWrapper>
+                <SelectBtn
+                  onClick={() => handleIngredients('밥')}
+                  type={input.ingredients === '밥' ? 'selected' : undefined}>
+                  밥
+                </SelectBtn>
+                <SelectBtn
+                  onClick={() => handleIngredients('면')}
+                  type={input.ingredients === '면' ? 'selected' : undefined}>
+                  면
+                </SelectBtn>
+                <SelectBtn
+                  onClick={() => handleIngredients('고기/해물')}
+                  type={input.ingredients === '고기/해물' ? 'selected' : undefined}>
+                  고기/해물
+                </SelectBtn>
+              </SelectBtnsWrapper>
+              <StepBtnsWrapper>
+                <StepBtn onClick={() => handleStepBtn('이전으로')}>이전으로</StepBtn>
+                <StepBtn onClick={() => handleStepBtn('다음으로')} type={input.ingredients || 'disabled'}>
+                  다음으로
+                </StepBtn>
+              </StepBtnsWrapper>
+            </>
+          ),
+          3: (
+            <>
+              <SelectBtnsWrapper>
+                <SelectBtn onClick={() => handleBroth(false)} type={input.broth === false ? 'selected' : undefined}>
+                  국물 시러
+                </SelectBtn>
+                <SelectBtn onClick={() => handleBroth(true)} type={input.broth === true ? 'selected' : undefined}>
+                  국물 조아
+                </SelectBtn>
+              </SelectBtnsWrapper>
+              <StepBtnsWrapper>
+                <StepBtn onClick={() => handleStepBtn('이전으로')}>이전으로</StepBtn>
+                <StepBtn
+                  onClick={() => handleStepBtn('다음으로')}
+                  type={input.broth === undefined ? 'disabled' : undefined}>
+                  다음으로
+                </StepBtn>
+              </StepBtnsWrapper>
+            </>
+          ),
           4: <>4</>,
         }[step]
       }
