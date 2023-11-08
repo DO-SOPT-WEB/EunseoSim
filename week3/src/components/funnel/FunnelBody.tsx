@@ -41,12 +41,11 @@ const FunnelBody = ({ step, setStep, input, setInput }: FunnelBodyProps) => {
     });
   };
 
-  const handleStepStartBtn = () => {
-    input.recommendType === '취향' ? setStep(1) : (setSelectedMenu(selectMenu(input)), setStep(4));
-  };
-
-  const handleStepBtn = (type: '이전으로' | '다음으로' | '결과보기' | '다시하기') => {
+  const handleStepBtn = (type: '시작하기' | '이전으로' | '다음으로' | '결과보기' | '다시하기') => {
     switch (type) {
+      case '시작하기':
+        input.recommendType === '취향' ? setStep(1) : (setSelectedMenu(selectMenu(input)), setStep(4));
+        break;
       case '이전으로':
         setStep(step - 1);
         break;
@@ -93,7 +92,7 @@ const FunnelBody = ({ step, setStep, input, setInput }: FunnelBodyProps) => {
               </SelectBtnsWrapper>
               {input.recommendType && (
                 <StepBtnsWrapper>
-                  <StepBtn onClick={handleStepStartBtn}>
+                  <StepBtn onClick={() => handleStepBtn('시작하기')}>
                     {input.recommendType === '취향' ? '네 취향을 알려줘' : '돌려돌려 메뉴판'}
                   </StepBtn>
                 </StepBtnsWrapper>
