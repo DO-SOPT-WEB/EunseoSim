@@ -21,17 +21,21 @@ const StepBtnDefaultStyle = css`
   align-items: center;
   justify-content: center;
 
-  width: 15rem;
+  width: 23rem;
   height: 7rem;
 
-  ${({ theme }) => theme.fonts.Head1}
+  ${({ theme }) => theme.fonts.Body1}
 
   cursor: pointer;
 
-  border: 0.5rem solid ${({ theme }) => theme.colors.black};
+  border: none;
   border-radius: 3rem;
   background-color: ${({ theme }) => theme.colors.secondary};
   color: ${({ theme }) => theme.colors.black};
+
+  &:hover {
+    border: 0.5rem solid ${({ theme }) => theme.colors.black};
+  }
 `;
 
 const StepBtnStateStyle = {
@@ -40,6 +44,8 @@ const StepBtnStateStyle = {
     background-color: ${({ theme }) => theme.colors.grayLight};
     color: ${({ theme }) => theme.colors.grayDark};
     border: none;
+
+    pointer-events: none;
   `,
 };
 

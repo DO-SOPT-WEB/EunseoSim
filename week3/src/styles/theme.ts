@@ -19,6 +19,10 @@ const fonts = {
     font-family: 'DOSPilgiMedium';
     font-size: 3rem;
   `,
+  Body1: css`
+    font-family: 'DOSPilgiMedium';
+    font-size: 2rem;
+  `,
 };
 
 const theme: DefaultTheme = {

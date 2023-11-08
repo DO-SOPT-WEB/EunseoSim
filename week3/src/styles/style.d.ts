@@ -13,6 +13,7 @@ declare module 'styled-components' {
     fonts: {
       Title1: SerializedStyles;
       Head1: SerializedStyles;
+      Body1: SerializedStyles;
     };
   }
 }
