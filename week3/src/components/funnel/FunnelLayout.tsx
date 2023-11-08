@@ -1,12 +1,11 @@
-import { inputState, stepState } from '../../types/states';
-
 import FunnelBody from './FunnelBody';
 import FunnelTitle from './FunnelTitle';
+import { inputState } from '../../types/states';
 import styled from 'styled-components';
 import { useState } from 'react';
 
 const FunnelLayout = () => {
-  const [step, setStep] = useState<stepState>(0);
+  const [step, setStep] = useState<number>(0);
   const [input, setInput] = useState<inputState>({
     recommendType: undefined,
     country: undefined,

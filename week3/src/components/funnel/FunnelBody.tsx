@@ -1,36 +1,36 @@
-import { inputState, stepState } from '../../types/states';
+import { broth, country, ingredients, inputState, recommendType } from '../../types/states';
 
 import SelectBtn from '../common/SelectBtn';
 import StepBtn from '../common/StepBtn';
 import styled from 'styled-components';
 
 interface FunnelBodyProps {
-  step: stepState;
+  step: number;
   setStep: React.Dispatch<React.SetStateAction<number>>;
   input: inputState;
   setInput: React.Dispatch<React.SetStateAction<inputState>>;
 }
 
 const FunnelBody = ({ step, setStep, input, setInput }: FunnelBodyProps) => {
-  const handleRecommendType = (recommendType?: '취향' | '랜덤') => {
+  const handleRecommendType = (recommendType?: recommendType) => {
     setInput((prev: inputState) => {
       return { ...prev, recommendType: recommendType };
     });
   };
 
-  const handleCountry = (country?: '한식' | '일식' | '중식') => {
+  const handleCountry = (country?: country) => {
     setInput((prev: inputState) => {
       return { ...prev, country: country };
     });
   };
 
-  const handleIngredients = (ingredients?: '밥' | '면' | '고기/해물') => {
+  const handleIngredients = (ingredients?: ingredients) => {
     setInput((prev: inputState) => {
       return { ...prev, ingredients: ingredients };
     });
   };
 
-  const handleBroth = (broth?: boolean) => {
+  const handleBroth = (broth?: broth) => {
     setInput((prev: inputState) => {
       return { ...prev, broth: broth };
     });
@@ -132,10 +132,14 @@ const FunnelBody = ({ step, setStep, input, setInput }: FunnelBodyProps) => {
           3: (
             <>
               <SelectBtnsWrapper>
-                <SelectBtn onClick={() => handleBroth(false)} type={input.broth === false ? 'selected' : undefined}>
+                <SelectBtn
+                  onClick={() => handleBroth('국물시러')}
+                  type={input.broth === '국물시러' ? 'selected' : undefined}>
                   국물 시러
                 </SelectBtn>
-                <SelectBtn onClick={() => handleBroth(true)} type={input.broth === true ? 'selected' : undefined}>
+                <SelectBtn
+                  onClick={() => handleBroth('국물조아')}
+                  type={input.broth === '국물조아' ? 'selected' : undefined}>
                   국물 조아
                 </SelectBtn>
               </SelectBtnsWrapper>
