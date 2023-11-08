@@ -46,6 +46,7 @@ const FunnelBody = ({ step, setStep, input, setInput }: FunnelBodyProps) => {
   const handleStepBtn = (type: '시작하기' | '이전으로' | '다음으로' | '결과보기' | '다시하기') => {
     switch (type) {
       case '시작하기':
+        setCount(3);
         input.recommendType === '취향' ? setStep(1) : (setSelectedMenu(selectMenu(input)), setStep(4));
         break;
       case '이전으로':
