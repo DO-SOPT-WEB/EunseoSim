@@ -6,9 +6,14 @@ const colors = {
   grayLight: '#D9D9D9',
   grayDark: '#707070',
   black: '#000000',
+  white: '#ffffff',
 };
 
 const fonts = {
+  Title1: css`
+    font-family: 'DOSPilgiMedium';
+    font-size: 5rem;
+  `,
   Head1: css`
     font-family: 'DOSPilgiMedium';
     font-size: 2rem;

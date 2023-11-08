@@ -1,0 +1,28 @@
+import FunnelBody from './FunnelBody';
+import FunnelTitle from './FunnelTitle';
+import { recommendTypeState } from '../../types/states';
+import { stepState } from '../../types/states';
+import styled from 'styled-components';
+import { useState } from 'react';
+
+const FunnelLayout = () => {
+  const [step, setStep] = useState<stepState>(0);
+  const [recommendType, setRecommendType] = useState<recommendTypeState>(undefined);
+
+  return (
+    <>
+      <FunnelLayoutWrapper>
+        <FunnelTitle step={step} />
+        <FunnelBody step={step} recommendType={recommendType}></FunnelBody>
+      </FunnelLayoutWrapper>
+    </>
+  );
+};
+
+export default FunnelLayout;
+
+const FunnelLayoutWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;

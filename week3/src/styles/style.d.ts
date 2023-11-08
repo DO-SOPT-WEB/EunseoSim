@@ -8,8 +8,10 @@ declare module 'styled-components' {
       grayLight: string;
       grayDark: string;
       black: string;
+      white: string;
     };
     fonts: {
+      Title1: SerializedStyles;
       Head1: SerializedStyles;
     };
   }
