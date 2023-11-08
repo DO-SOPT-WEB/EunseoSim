@@ -23,9 +23,9 @@ export const selectMenu = (input: inputState) => {
       }
       break;
     case '랜덤':
-      finalString += ['K', 'J', 'C'][Math.floor(Math.random()) * 3];
-      finalString += ['R', 'N', 'M'][Math.floor(Math.random()) * 3];
-      finalString += ['O', 'X'][Math.floor(Math.random()) * 3];
+      finalString += ['K', 'J', 'C'][Math.floor(Math.random() * 3)];
+      finalString += ['R', 'N', 'M'][Math.floor(Math.random() * 3)];
+      finalString += ['O', 'X'][Math.floor(Math.random() * 2)];
       return finalString;
     default:
       return finalString;

@@ -2,6 +2,7 @@ import { broth, country, ingredients, inputState, recommendType } from '../../ty
 
 import SelectBtn from '../common/SelectBtn';
 import StepBtn from '../common/StepBtn';
+import { selectMenu } from '../../utils/selectMenu';
 import styled from 'styled-components';
 
 interface FunnelBodyProps {
@@ -153,7 +154,16 @@ const FunnelBody = ({ step, setStep, input, setInput }: FunnelBodyProps) => {
               </StepBtnsWrapper>
             </>
           ),
-          4: <>4</>,
+          4: (
+            <>
+              <SelectBtn
+                onClick={() => {
+                  console.log(selectMenu(input));
+                }}>
+                테스트
+              </SelectBtn>
+            </>
+          ),
         }[step]
       }
     </>
