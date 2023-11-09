@@ -1,16 +1,21 @@
+import { useCallback, useEffect } from 'react';
+
 import styled from 'styled-components';
-import { useEffect } from 'react';
 interface CountDownType {
   count: number;
   setCount: React.Dispatch<React.SetStateAction<number>>;
 }
 
 const CountDown = ({ count, setCount }: CountDownType) => {
+  const decrementCount = useCallback(() => {
+    setCount((prev) => prev - 1);
+  }, [setCount]);
+
   useEffect(() => {
-    setTimeout(() => {
-      count > 0 && setCount(count - 1);
-    }, 1000);
-  }, [count]);
+    const timeoutId = setTimeout(decrementCount, 1000);
+
+    return () => clearTimeout(timeoutId);
+  }, [count, decrementCount]);
 
   return <CountDownWrapper>{count}</CountDownWrapper>;
 };
