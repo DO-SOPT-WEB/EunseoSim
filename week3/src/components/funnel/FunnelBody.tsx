@@ -188,7 +188,7 @@ const FunnelBody = ({ step, setStep, input, setInput }: FunnelBodyProps) => {
               ) : (
                 selectedMenu && (
                   <ResultWrapper>
-                    <ImgWrapper src={`src/assets/image/${selectedMenu}.jpeg`} alt={convertStringToName[selectedMenu]} />
+                    <ImgWrapper src={`${selectedMenu}.jpeg`} alt={convertStringToName[selectedMenu]} />
                     <SelectedMenuWrapper>✱{convertStringToName[selectedMenu]}✱</SelectedMenuWrapper>
                     <StepBtn onClick={() => handleStepBtn('다시하기')}>다시하기</StepBtn>
                   </ResultWrapper>
