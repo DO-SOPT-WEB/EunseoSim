@@ -1,0 +1,269 @@
+@import url("reset.css");
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css");
+
+:root {
+  --yellow-color: #f9e44c;
+  --dark-yellow-color: #f1db49;
+  --red-color: #d06661;
+  --blue-color: #618dd0;
+  --white-color: #ffffff;
+  --weak-white-color: #ffffff5a;
+  --weak-gray-color: rgb(231, 231, 231);
+  --dark-gray-color: #464646;
+  --gray-color: #898989;
+}
+
+html,
+body {
+  font-size: 62.5%;
+  line-height: 1.285;
+}
+
+body {
+  font-family: "Pretendard";
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 1rem;
+  color: var(--dark-gray-color-color);
+}
+
+/* summary section */
+.summary {
+  background-color: var(--yellow-color);
+
+  width: 100%;
+  padding-bottom: 5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+
+header {
+  font-size: 2.4rem;
+  font-weight: 700;
+
+  margin: 2.5rem 0;
+  padding-bottom: 2rem;
+  margin-bottom: 4rem;
+  width: 100%;
+
+  text-align: center;
+
+  border-bottom: 0.1rem solid var(--weak-white-color);
+}
+
+.summary > h1 {
+  font-size: 3rem;
+  font-weight: 900;
+
+  padding: 1rem 0;
+}
+
+.income-spending {
+  display: flex;
+  gap: 2rem;
+
+  margin-top: 1rem;
+}
+
+.income-spending > div {
+  display: flex;
+  gap: 1rem;
+}
+
+.income-spending > .income {
+  color: var(--red-color);
+}
+
+.income-spending > .spending {
+  color: var(--blue-color);
+}
+
+.income-spending button {
+  background-color: var(--dark-yellow-color);
+
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* main */
+
+main {
+  font-size: 1.6rem;
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.date {
+  font-size: 2rem;
+
+  margin-top: 2rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.date > button {
+  background-color: var(--weak-gray-color);
+  color: var(--gray-color);
+
+  font-size: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+}
+
+.overall-list {
+  width: 100%;
+  height: 50rem;
+
+  padding: 2rem;
+  margin-top: 2rem;
+
+  overflow-y: scroll;
+}
+
+.sub-menu {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 1rem 0;
+  padding: 0 1rem;
+}
+
+.sub-menu > strong {
+  font-weight: 700;
+}
+
+.checkboxes > label {
+  padding: 0.8rem 1.5rem;
+
+  background-color: var(--gray-color);
+  color: var(--white-color);
+
+  border-radius: 1rem;
+
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label {
+  background-color: var(--dark-yellow-color);
+  color: var(--dark-gray-color);
+}
+
+/* list */
+ol {
+  margin-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  padding: 2.5rem 1rem;
+  margin-bottom: 1.2rem;
+
+  border-bottom: 0.1rem solid var(--weak-gray-color);
+}
+
+li > button {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+li > .title {
+  display: flex;
+  gap: 2rem;
+}
+
+li > .title > h3 {
+  width: 17rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+
+.delete-btn {
+  background-color: var(--dark-yellow-color);
+
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 0.5rem;
+}
+
+li > h4 {
+  font-weight: 700;
+}
+
+.text-spending {
+  color: var(--blue-color);
+}
+
+/* bottom plus button */
+.bottom-plus-btn {
+  width: 100%;
+  height: 4rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--gray-color);
+
+  position: fixed;
+  bottom: 0;
+}
+
+.bottom-plus-btn > button {
+  background-color: var(--yellow-color);
+  color: var(--dark-gray-color);
+
+  width: 5rem;
+  height: 5rem;
+
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 4rem;
+
+  position: absolute;
+  bottom: 1rem;
+
+  cursor: pointer;
+}
