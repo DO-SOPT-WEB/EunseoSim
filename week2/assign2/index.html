@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>💸시믄서의 가계부💸</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="assign4-favicon.png" />
+  </head>
+  <body>
+    <section class="summary">
+      <header>💸 시믄서의 가계부 💸</header>
+      <h2>생활비 관리</h2>
+      <h1 id="balance"></h1>
+      <div class="income-spending">
+        <div class="income">
+          <button type="button">+</button>
+          <span id="income-text">200,000원</span>
+        </div>
+        <div class="spending">
+          <button type="button">-</button>
+          <span id="spending-text">6,000원</span>
+        </div>
+      </div>
+    </section>
+    <main>
+      <div class="date">
+        <button type="button">&lt;</button>
+        <span>10월 13일</span>
+        <button type="button">&gt;</button>
+      </div>
+      <div class="overall-list">
+        <div class="sub-menu">
+          <strong>내역</strong>
+          <div class="checkboxes">
+            <input type="checkbox" name="income" id="checkbox-income" checked />
+            <label for="checkbox-income">수입</label>
+            <input
+              type="checkbox"
+              name="spending"
+              id="checkbox-spending"
+              checked
+            />
+            <label for="checkbox-spending">지출</label>
+          </div>
+        </div>
+        <ol id="list-wrapper"></ol>
+
+        <template id="item-template">
+          <li id="{item-id}">
+            <div class="title">
+              <small>{item-category}</small>
+              <h3>{item-name}</h3>
+            </div>
+            <h4 class="text-{item-type}">{item-cost}원</h4>
+            <button class="delete-btn" type="button">X</button>
+          </li>
+        </template>
+      </div>
+    </main>
+    <div class="bottom-plus-btn">
+      <button type="button" id="add-btn">+</button>
+    </div>
+    <a href="/category" class="bottom-category-btn">
+      <button type="button" id="category-btn">✍️</button>
+    </a>
+
+    <aside id="delete-btn-modal">
+      <div class="delete-btn-modal__content">
+        <h3>정말 삭제하시겠습니까?</h3>
+        <div class="buttons">
+          <button type="button" id="delete-btn-confirm">확인</button>
+          <button type="button" id="delete-btn-cancel">취소</button>
+        </div>
+      </div>
+    </aside>
+
+    <aside id="add-btn-modal">
+      <div id="add-btn-modal__content">
+        <h3>내역 추가</h3>
+        <form id="add-form">
+          <div class="add-form-radios">
+            <div>
+              <input
+                id="add-form-radio-income"
+                type="radio"
+                name="add-form"
+                value="income"
+                checked
+              />
+              <label for="add-form-radio-income">수입</label>
+            </div>
+            <div>
+              <input
+                id="add-form-radio-spending"
+                type="radio"
+                name="add-form"
+                value="spending"
+              />
+              <label for="add-form-radio-spending">지출</label>
+            </div>
+          </div>
+          <div>
+            <label>종류</label>
+            <select id="add-form-category-select"></select>
+          </div>
+          <div>
+            <label>금액</label>
+            <input
+              type="text"
+              id="add-form-cost-input"
+              placeholder="숫자로 입력해 주세요"
+            />
+          </div>
+          <div>
+            <label>내용</label>
+            <input
+              id="add-form-name-input"
+              type="text"
+              placeholder="문자로 입력해 주세요"
+            />
+          </div>
+          <div id="add-form-buttons">
+            <button id="add-form-submit-btn" type="submit">저장하기</button>
+            <button id="add-form-cancel-btn" type="button">닫기</button>
+          </div>
+        </form>
+      </div>
+    </aside>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

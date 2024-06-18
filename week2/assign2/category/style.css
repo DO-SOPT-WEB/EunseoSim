@@ -1,0 +1,117 @@
+@import url("../reset.css");
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css");
+
+:root {
+  --yellow-color: #f9e44c;
+  --dark-yellow-color: #f1db49;
+  --red-color: #d06661;
+  --blue-color: #618dd0;
+  --white-color: #ffffff;
+  --weak-white-color: #ffffff5a;
+  --weak-gray-color: rgb(231, 231, 231);
+  --dark-gray-color: #464646;
+  --gray-color: #898989;
+}
+
+html,
+body {
+  font-size: 62.5%;
+  line-height: 1.285;
+}
+
+body {
+  font-family: "Pretendard";
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 1rem;
+  color: var(--dark-gray-color-color);
+
+  height: 100%;
+}
+
+/* summary section */
+.summary {
+  background-color: var(--yellow-color);
+
+  width: 100%;
+  height: 100%;
+  padding-bottom: 5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+header {
+  font-size: 2.4rem;
+  font-weight: 700;
+
+  margin: 2.5rem 0;
+  padding-bottom: 2rem;
+  margin-bottom: 4rem;
+  width: 100%;
+
+  text-align: center;
+
+  border-bottom: 0.1rem solid var(--weak-white-color);
+}
+
+article > h2 {
+  width: 100%;
+
+  margin-bottom: 1rem;
+}
+
+.category-list {
+  width: 31rem;
+
+  background-color: var(--white-color);
+
+  margin-bottom: 3rem;
+  padding: 2rem;
+
+  border-radius: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.category-list > ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#income-category-list > ol > li {
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+
+  background-color: var(--red-color);
+  color: var(--white-color);
+}
+
+#spending-category-list > ol > li {
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+
+  background-color: var(--blue-color);
+  color: var(--white-color);
+}
+
+input {
+  width: 90%;
+
+  border-bottom: 0.1rem solid var(--dark-gray-color);
+}
+
+#home-btn {
+  background-color: var(--white-color);
+  padding: 1rem;
+  border-radius: 100%;
+}
